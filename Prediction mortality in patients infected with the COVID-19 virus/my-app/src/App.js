@@ -1,17 +1,13 @@
+import React, { useEffect, useState } from "react";
+import Home from "./home";
+import "./App.css";
 
-import './App.css';
-
-function App() {
+const App = () => {
   return (
 
-    <div className="App">
+          <Home />
 
-      <div className="bg">
-      <h1>Hi Forth Tawan June</h1>
-      
-      </div>
-    </div>
   );
-}
+};
 
 export default App;
