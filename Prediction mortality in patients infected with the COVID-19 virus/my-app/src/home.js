@@ -81,16 +81,11 @@ const Home = () => {
 
           {/* -------------โรค----------------------- */}
           
+          
           {["checkbox"].map((type) => (
-              
+            
             <div key={`inline-${type}`} className="mb-3">
-              <Form.Check
-                inline
-                label="Binary"
-                name="group1"
-                type={type}
-                id={`inline-${type}-1`}
-              />
+              
               <Form.Check
                 inline
                 label="Hypertension"
@@ -194,22 +189,23 @@ const Home = () => {
                 label=" Hypothyroidism"
                 name="group1"
                 type={type}
-                id={`inline-${type}-15`}
+                id={`inline-${type}-16`}
               />
               <Form.Check
                 inline
                 label=" Dyslipidemia"
                 name="group1"
                 type={type}
-                id={`inline-${type}-15`}
+                id={`inline-${type}-17`}
               />
             </div>
+           
           ))}
 
            {/* -------------อาการ----------------------- */}
 
            {["checkbox"].map((type) => (
-              
+             
               <div key={`inline-${type}`} className="mb-3">
                 <Form.Check
                   inline
@@ -330,124 +326,112 @@ const Home = () => {
                   type={type}
                   id={`inline-${type}-17`}
                 />
-                 <Form.Check
-                  inline
-                  label="Lesions on chest radiographs"
-                  name="group1"
-                  type={type}
-                  id={`inline-${type}-11`}
-                />
+                 
                 <Form.Check
                   inline
                   label="Hypertension"
                   name="group1"
                   type={type}
-                  id={`inline-${type}-12`}
+                  id={`inline-${type}-19`}
                 />
                 <Form.Check
                   inline
                   label="Myalgia"
                   name="group1"
                   type={type}
-                  id={`inline-${type}-13`}
+                  id={`inline-${type}-20`}
                 />
                 <Form.Check
                   inline
                   label="Obnubilation"
                   name="group1"
                   type={type}
-                  id={`inline-${type}-14`}
+                  id={`inline-${type}-21`}
                 />
                 <Form.Check
                   inline
                   label="Pneumonia"
                   name="group1"
                   type={type}
-                  id={`inline-${type}-15`}
+                  id={`inline-${type}-22`}
                 />
                 <Form.Check
                   inline
                   label="Myelofibrosis"
                   name="group1"
                   type={type}
-                  id={`inline-${type}-16`}
+                  id={`inline-${type}-23`}
                 />
                 <Form.Check
                   inline
                   label="Respiratory distress"
                   name="group1"
                   type={type}
-                  id={`inline-${type}-17`}
+                  id={`inline-${type}-24`}
                 />
                 <Form.Check
                   inline
                   label="Rhinorrhea"
                   name="group1"
                   type={type}
-                  id={`inline-${type}-17`}
+                  id={`inline-${type}-25`}
                 />
                 <Form.Check
                   inline
                   label="Shortness of breath"
                   name="group1"
                   type={type}
-                  id={`inline-${type}-17`}
+                  id={`inline-${type}-26`}
                 />
                 <Form.Check
                   inline
                   label="Somnolence"
                   name="group1"
                   type={type}
-                  id={`inline-${type}-17`}
+                  id={`inline-${type}-27`}
                 />
                 <Form.Check
                   inline
                   label="Sore throat"
                   name="group1"
                   type={type}
-                  id={`inline-${type}-17`}
+                  id={`inline-${type}-28`}
                 />
                 <Form.Check
                   inline
                   label="Sputum"
                   name="group1"
                   type={type}
-                  id={`inline-${type}-17`}
+                  id={`inline-${type}-29`}
                 />
                 <Form.Check
                   inline
                   label="Septic shock"
                   name="group1"
                   type={type}
-                  id={`inline-${type}-17`}
+                  id={`inline-${type}-30`}
                 />
                 <Form.Check
                   inline
                   label="Heart attack"
                   name="group1"
                   type={type}
-                  id={`inline-${type}-17`}
+                  id={`inline-${type}-31`}
                 />
                 <Form.Check
                   inline
                   label="Septic shock"
                   name="Cold"
                   type={type}
-                  id={`inline-${type}-17`}
+                  id={`inline-${type}-32`}
                 />
-                <Form.Check
-                  inline
-                  label="Cardiac disease"
-                  name="group1"
-                  type={type}
-                  id={`inline-${type}-17`}
-                />
+                
                 <Form.Check
                   inline
                   label="Hypoxia"
                   name="group1"
                   type={type}
-                  id={`inline-${type}-17`}
+                  id={`inline-${type}-34`}
                 />
 
 
