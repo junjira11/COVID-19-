@@ -18,6 +18,31 @@ function Home({ classes }) {
   const [history, setHistory] = useState();
   const [sex, setSex] = useState();
 
+
+  const [Gasp, setGasp] = useState(0);
+  const [Headache, setHeadache] = useState(0);
+  const [Kidneyfailure, setKidneyfailure] = useState(0);
+  const [Hypertension, setHypertension] = useState(0);
+  const [Myalgia, setMyalgia] = useState(0);
+  const [Obnubilation, setObnubilation] = useState(0);
+  const [Pneumonia, setPneumonia] = useState(0);
+  const [Myelofibrosis, setMyelofibrosis] = useState(0);
+  const [Respiratorydistress, setRespiratorydistress] = useState(0);
+
+  const [Rhinorrhea, setRhinorrhea] = useState(0);
+  const [Shortnessofbreath, setShortnessofbreath] = useState(0);
+  const [Somnolence, setSomnolence] = useState(0);
+
+  const [Sorethroat, setSorethroat] = useState(0);
+
+  const [Sputum, setSputum] = useState(0);
+  const [Septicshock, setSepticshock] = useState(0);
+  const [Heartattack, setHeartattack] = useState(0);
+  const [Septicshock, setSepticshock] = useState(0);
+  const [Hypoxia, setHypoxia] = useState(0);
+  
+
+
   const [open, setOpen] = React.useState(false);
   // const handleClickOpen = () => {
   //   setOpen(true);
@@ -389,6 +414,10 @@ function Home({ classes }) {
                     name="group1"
                     type={type}
                     id={`inline-${type}-15`}
+                    value="1"
+                    onChange={(event) => {
+                      setGasp(event.target.value);
+                    }}
                   />
                   <Form.Check
                     inline
@@ -396,6 +425,10 @@ function Home({ classes }) {
                     name="group1"
                     type={type}
                     id={`inline-${type}-16`}
+                    value="1"
+                    onChange={(event) => {
+                      setHeadache(event.target.value);
+                    }}
                   />
                   <Form.Check
                     inline
@@ -403,6 +436,10 @@ function Home({ classes }) {
                     name="group1"
                     type={type}
                     id={`inline-${type}-17`}
+                    value="1"
+                    onChange={(event) => {
+                      setKidneyfailure(event.target.value);
+                    }}
                   />
 
                   <Form.Check
@@ -411,6 +448,10 @@ function Home({ classes }) {
                     name="group1"
                     type={type}
                     id={`inline-${type}-19`}
+                    value="1"
+                    onChange={(event) => {
+                      setHypertension(event.target.value);
+                    }}
                   />
                   <Form.Check
                     inline
@@ -418,6 +459,10 @@ function Home({ classes }) {
                     name="group1"
                     type={type}
                     id={`inline-${type}-20`}
+                    value="1"
+                    onChange={(event) => {
+                      setMyalgia(event.target.value);
+                    }}
                   />
                   <Form.Check
                     inline
@@ -425,6 +470,10 @@ function Home({ classes }) {
                     name="group1"
                     type={type}
                     id={`inline-${type}-21`}
+                    value="1"
+                    onChange={(event) => {
+                      setObnubilation(event.target.value);
+                    }}
                   />
                   <Form.Check
                     inline
@@ -432,6 +481,10 @@ function Home({ classes }) {
                     name="group1"
                     type={type}
                     id={`inline-${type}-22`}
+                    value="1"
+                    onChange={(event) => {
+                      setPneumonia(event.target.value);
+                    }}
                   />
                   <Form.Check
                     inline
@@ -439,6 +492,10 @@ function Home({ classes }) {
                     name="group1"
                     type={type}
                     id={`inline-${type}-23`}
+                    value="1"
+                    onChange={(event) => {
+                      setMyelofibrosis(event.target.value);
+                    }}
                   />
                   <Form.Check
                     inline
@@ -446,6 +503,10 @@ function Home({ classes }) {
                     name="group1"
                     type={type}
                     id={`inline-${type}-24`}
+                    value="1"
+                    onChange={(event) => {
+                      setRespiratorydistress(event.target.value);
+                    }}
                   />
                   <Form.Check
                     inline
@@ -453,6 +514,10 @@ function Home({ classes }) {
                     name="group1"
                     type={type}
                     id={`inline-${type}-25`}
+                    value="1"
+                    onChange={(event) => {
+                      setRhinorrhea(event.target.value);
+                    }}
                   />
                   <Form.Check
                     inline
@@ -460,6 +525,10 @@ function Home({ classes }) {
                     name="group1"
                     type={type}
                     id={`inline-${type}-26`}
+                    value="1"
+                    onChange={(event) => {
+                      setShortnessofbreath(event.target.value);
+                    }}
                   />
                   <Form.Check
                     inline
@@ -467,6 +536,10 @@ function Home({ classes }) {
                     name="group1"
                     type={type}
                     id={`inline-${type}-27`}
+                    value="1"
+                    onChange={(event) => {
+                      setSomnolence(event.target.value);
+                    }}
                   />
                   <Form.Check
                     inline
@@ -474,6 +547,10 @@ function Home({ classes }) {
                     name="group1"
                     type={type}
                     id={`inline-${type}-28`}
+                    value="1"
+                    onChange={(event) => {
+                      setSorethroat(event.target.value);
+                    }}
                   />
                   <Form.Check
                     inline
@@ -481,6 +558,10 @@ function Home({ classes }) {
                     name="group1"
                     type={type}
                     id={`inline-${type}-29`}
+                    value="1"
+                    onChange={(event) => {
+                      setSputum(event.target.value);
+                    }}
                   />
                   <Form.Check
                     inline
@@ -488,6 +569,10 @@ function Home({ classes }) {
                     name="group1"
                     type={type}
                     id={`inline-${type}-30`}
+                    value="1"
+                    onChange={(event) => {
+                      setSepticshock(event.target.value);
+                    }}
                   />
                   <Form.Check
                     inline
@@ -495,6 +580,10 @@ function Home({ classes }) {
                     name="group1"
                     type={type}
                     id={`inline-${type}-31`}
+                    value="1"
+                    onChange={(event) => {
+                      setHeartattack(event.target.value);
+                    }}
                   />
                   <Form.Check
                     inline
@@ -502,7 +591,12 @@ function Home({ classes }) {
                     name="Cold"
                     type={type}
                     id={`inline-${type}-32`}
+                    value="1"
+                    onChange={(event) => {
+                      setSepticshock(event.target.value);
+                    }}
                   />
+                  
 
                   <Form.Check
                     inline
@@ -511,6 +605,9 @@ function Home({ classes }) {
                     type={type}
                     id={`inline-${type}-34`}
                     onClick={(evet) => console.log(evet.target.value)}
+                    onChange={(event) => {
+                      setHypoxia(event.target.value);
+                    }}
                   />
                 </div>
               ))}
