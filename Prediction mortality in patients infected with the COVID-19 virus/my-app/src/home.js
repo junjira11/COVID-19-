@@ -16,6 +16,7 @@ function Home({ classes }) {
   const [province, setProvince] = useState();
   const [country, setCountry] = useState();
   const [history, setHistory] = useState();
+  const [sex, setSex] = useState();
 
   const [open, setOpen] = React.useState(false);
   // const handleClickOpen = () => {
@@ -26,11 +27,11 @@ function Home({ classes }) {
   // };
 
   async function sendinformation() {
-    const data = { age,city,province,country,history };
-    await Axios.post("/Covid-19", data, {});
-    // .then(res => {
-    //     window.location.reload()
-    // }).catch(error => console.log(error))
+    const data = { age, city, province, country, history, sex };
+    await Axios.post("/Covid-19", data)
+      .then(res => {
+        console.log(res.data)
+      }).catch(error => console.log(error))
   }
 
   return (
@@ -38,6 +39,9 @@ function Home({ classes }) {
       <h1>Prediction mortality in patients infected</h1>
       <h2>with the COVID-19 virus</h2>
       <div className="box-background">
+        <button class="button" onClick={() => sendinformation()}>
+          predic
+            </button>
         <Form>
           {/* -------------Age----------------------- */}
           <Form.Group as={Row} className="age" controlId="formHorizontalEmail">
@@ -66,15 +70,23 @@ function Home({ classes }) {
               <Col sm={2}>
                 <Form.Check
                   type="radio"
+                  value='0'
                   label="Male"
                   name="formHorizontalRadios"
                   id="formHorizontalRadios1"
+                  onChange={(event) => {
+                    setSex(event.target.value);
+                  }}
                 />
                 <Form.Check
                   type="radio"
+                  value='1'
                   label="Female"
                   name="formHorizontalRadios"
                   id="formHorizontalRadios2"
+                  onChange={(event) => {
+                    setSex(event.target.value);
+                  }}
                 />
               </Col>
             </Form.Group>
@@ -131,10 +143,10 @@ function Home({ classes }) {
               History Location:
             </Form.Label>
             <Col sm={10}>
-              <Form.Control type="text" placeholder="Travel history location" 
-               onChange={(event) => {
-                setHistory(event.target.value);
-              }}
+              <Form.Control type="text" placeholder="Travel history location"
+                onChange={(event) => {
+                  setHistory(event.target.value);
+                }}
               />
             </Col>
           </Form.Group>
@@ -505,7 +517,7 @@ function Home({ classes }) {
             </Col>
           </Form.Group>
           <center>
-            <button class="button" onClick={sendinformation()}>
+            <button class="button" onClick={() => sendinformation()}>
               predic
             </button>
           </center>
