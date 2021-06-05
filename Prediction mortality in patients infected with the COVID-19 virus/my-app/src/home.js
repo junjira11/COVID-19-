@@ -38,7 +38,6 @@ function Home({ classes }) {
 
   // Symptom
   const [anorexia, setAnorexia] = useState(0);
-  const [Hypertension, setHypertension] = useState(0);
   const [chest, setChest] = useState(0);
   const [chills, setChills] = useState(0);
   const [conjunctivitis, setConjunctivitis] = useState(0);
@@ -103,7 +102,6 @@ function Home({ classes }) {
       Hypothyroidism,
       Dyslipidemia,
       anorexia,
-      Hypertension,
       chest,
       chills,
       conjunctivitis,
