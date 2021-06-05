@@ -12,11 +12,31 @@ import Axios from "axios";
 
 function Home({ classes }) {
   const [age, setAge] = useState();
+  const [sex, setSex] = useState();
   const [city, setCity] = useState();
   const [province, setProvince] = useState();
   const [country, setCountry] = useState();
   const [history, setHistory] = useState();
-  const [sex, setSex] = useState();
+ 
+
+
+
+// Symptom
+  const [anorexia, setAnorexia] = useState(0);
+  const [Hypertension, setHypertension] = useState();
+  const [chest, setChest] = useState();
+  const [chills, setChills] = useState();
+  const [conjunctivitis, setConjunctivitis] = useState();
+  const [cough, setCough] = useState();
+  const [diarrhea, setDiarrhea] = useState();
+  const [dizziness, setDizziness] = useState();
+  const [dyspnea, setDyspnea] = useState();
+  const [emesis, setEmesis] = useState();
+  const [expectoration, setExpectoration] = useState();
+  const [eye, setEye] = useState();
+  const [fatigue, setFatigue] = useState();
+  const [fever, setFever] = useState();
+
 
 
   const [Gasp, setGasp] = useState(0);
@@ -190,6 +210,10 @@ function Home({ classes }) {
                     name="group1"
                     type={type}
                     id={`inline-${type}-2`}
+                    value="1"
+                    onChange={(event) => {
+                      setHypertension(event.target.value);
+                    }}
                   />
                   <Form.Check
                     inline
@@ -197,48 +221,76 @@ function Home({ classes }) {
                     name="group1"
                     type={type}
                     id={`inline-${type}-3`}
+                    value="1"
+                    onChange={(event) => {
+                      setDiabetes(event.target.value);
+                    }}
                   />
                   <Form.Check
                     inline
-                    label=" Kidney"
+                    label="Kidney"
                     name="group1"
                     type={type}
                     id={`inline-${type}-4`}
+                    value="1"
+                    onChange={(event) => {
+                      setKidney(event.target.value);
+                    }}
                   />
                   <Form.Check
                     inline
-                    label=" COPD"
+                    label="COPD"
                     name="group1"
                     type={type}
                     id={`inline-${type}-5`}
+                    value="1"
+                    onChange={(event) => {
+                      setCOPD(event.target.value);
+                    }}
                   />
                   <Form.Check
                     inline
-                    label=" Heart"
+                    label="Heart"
                     name="group1"
                     type={type}
                     id={`inline-${type}-6`}
+                    value="1"
+                    onChange={(event) => {
+                      setHeart(event.target.value);
+                    }}
                   />
                   <Form.Check
                     inline
-                    label=" Asthma"
+                    label="Asthma"
                     name="group1"
                     type={type}
                     id={`inline-${type}-7`}
+                    value="1"
+                    onChange={(event) => {
+                      setAsthma(event.target.value);
+                    }}
                   />
                   <Form.Check
                     inline
-                    label=" Prostate"
+                    label="Prostate"
                     name="group1"
                     type={type}
                     id={`inline-${type}-8`}
+                    value="1"
+                    onChange={(event) => {
+                      setProstate(event.target.value);
+                    }}
                   />
                   <Form.Check
                     inline
-                    label=" Cancer"
+                    label="Cancer"
                     name="group1"
                     type={type}
                     id={`inline-${type}-9`}
+                    value="1"
+                    onChange={(event) => {
+                      setCancer(event.target.value);
+                    }}
                   />
                   <Form.Check
                     inline
@@ -246,55 +298,87 @@ function Home({ classes }) {
                     name="group1"
                     type={type}
                     id={`inline-${type}-10`}
+                    value="1"
+                    onChange={(event) => {
+                      setTuberculosis(event.target.value);
+                    }}
                   />
                   <Form.Check
                     inline
-                    label=" Hepatitis"
+                    label="Hepatitis"
                     name="group1"
                     type={type}
                     id={`inline-${type}-11`}
+                    value="1"
+                    onChange={(event) => {
+                      setAnorexia(event.target.value);
+                    }}
                   />
                   <Form.Check
                     inline
-                    label=" HIV"
+                    label="HIV"
                     name="group1"
                     type={type}
                     id={`inline-${type}-12`}
+                    value="1"
+                    onChange={(event) => {
+                      setAnorexia(event.target.value);
+                    }}
                   />
                   <Form.Check
                     inline
-                    label=" Cereberal"
+                    label="Cereberal"
                     name="group1"
                     type={type}
                     id={`inline-${type}-13`}
+                    value="1"
+                    onChange={(event) => {
+                      setAnorexia(event.target.value);
+                    }}
                   />
                   <Form.Check
                     inline
-                    label=" Parkinson"
+                    label="Parkinson"
                     name="group1"
                     type={type}
                     id={`inline-${type}-14`}
+                    value="1"
+                    onChange={(event) => {
+                      setAnorexia(event.target.value);
+                    }}
                   />
                   <Form.Check
                     inline
-                    label=" Bronchitis"
+                    label="Bronchitis"
                     name="group1"
                     type={type}
                     id={`inline-${type}-15`}
+                    value="1"
+                    onChange={(event) => {
+                      setAnorexia(event.target.value);
+                    }}
                   />
                   <Form.Check
                     inline
-                    label=" Hypothyroidism"
+                    label="Hypothyroidism"
                     name="group1"
                     type={type}
                     id={`inline-${type}-16`}
+                    value="1"
+                    onChange={(event) => {
+                      setAnorexia(event.target.value);
+                    }}
                   />
                   <Form.Check
                     inline
-                    label=" Dyslipidemia"
+                    label="Dyslipidemia"
                     name="group1"
                     type={type}
                     id={`inline-${type}-17`}
+                    value="1"
+                    onChange={(event) => {
+                      setAnorexia(event.target.value);
+                    }}
                   />
                 </div>
               ))}
@@ -316,6 +400,10 @@ function Home({ classes }) {
                     name="group1"
                     type={type}
                     id={`inline-${type}-1`}
+                    value="1"
+                    onChange={(event) => {
+                      setAnorexia(event.target.value);
+                    }}
                   />
                   <Form.Check
                     inline
@@ -323,6 +411,10 @@ function Home({ classes }) {
                     name="group1"
                     type={type}
                     id={`inline-${type}-2`}
+                    value="1"
+                    onChange={(event) => {
+                      setHypertension(event.target.value);
+                    }}
                   />
                   <Form.Check
                     inline
@@ -330,6 +422,10 @@ function Home({ classes }) {
                     name="group1"
                     type={type}
                     id={`inline-${type}-3`}
+                    value="1"
+                    onChange={(event) => {
+                      setChest(event.target.value);
+                    }}
                   />
                   <Form.Check
                     inline
@@ -337,6 +433,10 @@ function Home({ classes }) {
                     name="group1"
                     type={type}
                     id={`inline-${type}-4`}
+                    value="1"
+                    onChange={(event) => {
+                      setChills(event.target.value);
+                    }}
                   />
                   <Form.Check
                     inline
@@ -344,6 +444,10 @@ function Home({ classes }) {
                     name="group1"
                     type={type}
                     id={`inline-${type}-5`}
+                    value="1"
+                    onChange={(event) => {
+                      setConjunctivitis(event.target.value);
+                    }}
                   />
                   <Form.Check
                     inline
@@ -351,6 +455,10 @@ function Home({ classes }) {
                     name="group1"
                     type={type}
                     id={`inline-${type}-6`}
+                    value="1"
+                    onChange={(event) => {
+                      setCough(event.target.value);
+                    }}
                   />
                   <Form.Check
                     inline
@@ -358,6 +466,10 @@ function Home({ classes }) {
                     name="group1"
                     type={type}
                     id={`inline-${type}-7`}
+                    value="1"
+                    onChange={(event) => {
+                      setDiarrhea(event.target.value);
+                    }}
                   />
                   <Form.Check
                     inline
@@ -365,6 +477,10 @@ function Home({ classes }) {
                     name="group1"
                     type={type}
                     id={`inline-${type}-8`}
+                    value="1"
+                    onChange={(event) => {
+                      setDizziness(event.target.value);
+                    }}
                   />
                   <Form.Check
                     inline
@@ -372,6 +488,10 @@ function Home({ classes }) {
                     name="group1"
                     type={type}
                     id={`inline-${type}-9`}
+                    value="1"
+                    onChange={(event) => {
+                      setDyspnea(event.target.value);
+                    }}
                   />
                   <Form.Check
                     inline
@@ -379,6 +499,10 @@ function Home({ classes }) {
                     name="group1"
                     type={type}
                     id={`inline-${type}-10`}
+                    value="1"
+                    onChange={(event) => {
+                      setEmesis(event.target.value);
+                    }}
                   />
                   <Form.Check
                     inline
@@ -386,6 +510,10 @@ function Home({ classes }) {
                     name="group1"
                     type={type}
                     id={`inline-${type}-11`}
+                    value="1"
+                    onChange={(event) => {
+                      setExpectoration(event.target.value);
+                    }}
                   />
                   <Form.Check
                     inline
@@ -393,6 +521,10 @@ function Home({ classes }) {
                     name="group1"
                     type={type}
                     id={`inline-${type}-12`}
+                    value="1"
+                    onChange={(event) => {
+                      setEye(event.target.value);
+                    }}
                   />
                   <Form.Check
                     inline
@@ -400,6 +532,10 @@ function Home({ classes }) {
                     name="group1"
                     type={type}
                     id={`inline-${type}-13`}
+                    value="1"
+                    onChange={(event) => {
+                      setFatigue(event.target.value);
+                    }}
                   />
                   <Form.Check
                     inline
@@ -407,6 +543,10 @@ function Home({ classes }) {
                     name="group1"
                     type={type}
                     id={`inline-${type}-14`}
+                    value="1"
+                    onChange={(event) => {
+                      setFever(event.target.value);
+                    }}
                   />
                   <Form.Check
                     inline
