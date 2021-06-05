@@ -17,8 +17,8 @@ function Home({ classes }) {
   const [province, setProvince] = useState();
   const [country, setCountry] = useState();
   const [history, setHistory] = useState();
- 
-//Disease
+
+  //Disease
   const [hypertension, setHypertension] = useState(0);
   const [diabetes, setDiabetes] = useState(0);
   const [Kidney, setKidney] = useState(0);
@@ -36,9 +36,7 @@ function Home({ classes }) {
   const [Hypothyroidism, setHypothyroidism] = useState(0);
   const [Dyslipidemia, setDyslipidemia] = useState(0);
 
-
-
-// Symptom
+  // Symptom
   const [anorexia, setAnorexia] = useState(0);
   const [Hypertension, setHypertension] = useState(0);
   const [chest, setChest] = useState(0);
@@ -53,26 +51,24 @@ function Home({ classes }) {
   const [eye, setEye] = useState(0);
   const [fatigue, setFatigue] = useState(0);
   const [fever, setFever] = useState();
-const [Gasp, setGasp] = useState(0);
+  const [Gasp, setGasp] = useState(0);
   const [Headache, setHeadache] = useState(0);
   const [Kidneyfailure, setKidneyfailure] = useState(0);
-  const [Hypertension, setHypertension] = useState(0);
+  const [SymptomHypertension, setSymptomHypertension] = useState(0);
   const [Myalgia, setMyalgia] = useState(0);
   const [Obnubilation, setObnubilation] = useState(0);
   const [Pneumonia, setPneumonia] = useState(0);
   const [Myelofibrosis, setMyelofibrosis] = useState(0);
   const [Respiratorydistress, setRespiratorydistress] = useState(0);
-const [Rhinorrhea, setRhinorrhea] = useState(0);
+  const [Rhinorrhea, setRhinorrhea] = useState(0);
   const [Shortnessofbreath, setShortnessofbreath] = useState(0);
   const [Somnolence, setSomnolence] = useState(0);
-const [Sorethroat, setSorethroat] = useState(0);
-const [Sputum, setSputum] = useState(0);
+  const [Sorethroat, setSorethroat] = useState(0);
+  const [Sputum, setSputum] = useState(0);
   const [Septicshock, setSepticshock] = useState(0);
   const [Heartattack, setHeartattack] = useState(0);
-  const [Septicshock, setSepticshock] = useState(0);
+  const [Cold, setCold] = useState(0);
   const [Hypoxia, setHypoxia] = useState(0);
-  
-
 
   const [open, setOpen] = React.useState(false);
   // const handleClickOpen = () => {
@@ -83,11 +79,68 @@ const [Sputum, setSputum] = useState(0);
   // };
 
   async function sendinformation() {
-    const data = { age, city, province, country, history, sex };
+    const data = {
+      age,
+      sex,
+      city,
+      province,
+      country,
+      history,
+      hypertension,
+      diabetes,
+      Kidney,
+      COPD,
+      Heart,
+      Asthma,
+      Prostate,
+      Cancer,
+      Tuberculosis,
+      Hepatitis,
+      HIV,
+      Cereberal,
+      Parkinson,
+      Bronchitis,
+      Hypothyroidism,
+      Dyslipidemia,
+      anorexia,
+      Hypertension,
+      chest,
+      chills,
+      conjunctivitis,
+      cough,
+      diarrhea,
+      dizziness,
+      dyspnea,
+      emesis,
+      expectoration,
+      eye,
+      fatigue,
+      fever,
+      Gasp,
+      Headache,
+      Kidneyfailure,
+      SymptomHypertension,
+      Myalgia,
+      Obnubilation,
+      Pneumonia,
+      Myelofibrosis,
+      Respiratorydistress,
+      Rhinorrhea,
+      Shortnessofbreath,
+      Somnolence,
+      Sorethroat,
+      Sputum,
+      Septicshock,
+      Heartattack,
+      Cold,
+      Hypoxia,
+
+    };
     await Axios.post("/Covid-19", data)
-      .then(res => {
-        console.log(res.data)
-      }).catch(error => console.log(error))
+      .then((res) => {
+        console.log(res.data);
+      })
+      .catch((error) => console.log(error));
   }
 
   return (
@@ -97,7 +150,7 @@ const [Sputum, setSputum] = useState(0);
       <div className="box-background">
         <button class="button" onClick={() => sendinformation()}>
           predic
-            </button>
+        </button>
         <Form>
           {/* -------------Age----------------------- */}
           <Form.Group as={Row} className="age" controlId="formHorizontalEmail">
@@ -126,7 +179,7 @@ const [Sputum, setSputum] = useState(0);
               <Col sm={2}>
                 <Form.Check
                   type="radio"
-                  value='0'
+                  value="0"
                   label="Male"
                   name="formHorizontalRadios"
                   id="formHorizontalRadios1"
@@ -136,7 +189,7 @@ const [Sputum, setSputum] = useState(0);
                 />
                 <Form.Check
                   type="radio"
-                  value='1'
+                  value="1"
                   label="Female"
                   name="formHorizontalRadios"
                   id="formHorizontalRadios2"
@@ -199,7 +252,9 @@ const [Sputum, setSputum] = useState(0);
               History Location:
             </Form.Label>
             <Col sm={10}>
-              <Form.Control type="text" placeholder="Travel history location"
+              <Form.Control
+                type="text"
+                placeholder="Travel history location"
                 onChange={(event) => {
                   setHistory(event.target.value);
                 }}
@@ -601,7 +656,7 @@ const [Sputum, setSputum] = useState(0);
                     id={`inline-${type}-19`}
                     value="1"
                     onChange={(event) => {
-                      setHypertension(event.target.value);
+                      setSymptomHypertension(event.target.value);
                     }}
                   />
                   <Form.Check
@@ -738,16 +793,15 @@ const [Sputum, setSputum] = useState(0);
                   />
                   <Form.Check
                     inline
-                    label="Septic shock"
-                    name="Cold"
+                    label="Cold"
+                    name="group1"
                     type={type}
                     id={`inline-${type}-32`}
                     value="1"
                     onChange={(event) => {
-                      setSepticshock(event.target.value);
+                      setCold(event.target.value);
                     }}
                   />
-                  
 
                   <Form.Check
                     inline
