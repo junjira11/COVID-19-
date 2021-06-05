@@ -18,6 +18,23 @@ function Home({ classes }) {
   const [country, setCountry] = useState();
   const [history, setHistory] = useState();
  
+//Disease
+  const [hypertension, setHypertension] = useState(0);
+  const [diabetes, setDiabetes] = useState(0);
+  const [Kidney, setKidney] = useState(0);
+  const [COPD, setCOPD] = useState(0);
+  const [Heart, setHeart] = useState(0);
+  const [Asthma, setAsthma] = useState(0);
+  const [Prostate, setProstate] = useState(0);
+  const [Cancer, setCancer] = useState(0);
+  const [Tuberculosis, setTuberculosis] = useState(0);
+  const [Hepatitis, setHepatitis] = useState(0);
+  const [HIV, setHIV] = useState(0);
+  const [Cereberal, setCereberal] = useState(0);
+  const [Parkinson, setParkinson] = useState(0);
+  const [Bronchitis, setBronchitis] = useState(0);
+  const [Hypothyroidism, setHypothyroidism] = useState(0);
+  const [Dyslipidemia, setDyslipidemia] = useState(0);
 
 
 
@@ -286,7 +303,7 @@ function Home({ classes }) {
                     id={`inline-${type}-11`}
                     value="1"
                     onChange={(event) => {
-                      setAnorexia(event.target.value);
+                      setHepatitis(event.target.value);
                     }}
                   />
                   <Form.Check
@@ -297,7 +314,7 @@ function Home({ classes }) {
                     id={`inline-${type}-12`}
                     value="1"
                     onChange={(event) => {
-                      setAnorexia(event.target.value);
+                      setHIV(event.target.value);
                     }}
                   />
                   <Form.Check
@@ -308,7 +325,7 @@ function Home({ classes }) {
                     id={`inline-${type}-13`}
                     value="1"
                     onChange={(event) => {
-                      setAnorexia(event.target.value);
+                      setCereberal(event.target.value);
                     }}
                   />
                   <Form.Check
@@ -319,7 +336,7 @@ function Home({ classes }) {
                     id={`inline-${type}-14`}
                     value="1"
                     onChange={(event) => {
-                      setAnorexia(event.target.value);
+                      setParkinson(event.target.value);
                     }}
                   />
                   <Form.Check
@@ -330,7 +347,7 @@ function Home({ classes }) {
                     id={`inline-${type}-15`}
                     value="1"
                     onChange={(event) => {
-                      setAnorexia(event.target.value);
+                      setBronchitis(event.target.value);
                     }}
                   />
                   <Form.Check
@@ -341,7 +358,7 @@ function Home({ classes }) {
                     id={`inline-${type}-16`}
                     value="1"
                     onChange={(event) => {
-                      setAnorexia(event.target.value);
+                      setHypothyroidism(event.target.value);
                     }}
                   />
                   <Form.Check
@@ -352,7 +369,7 @@ function Home({ classes }) {
                     id={`inline-${type}-17`}
                     value="1"
                     onChange={(event) => {
-                      setAnorexia(event.target.value);
+                      setDyslipidemia(event.target.value);
                     }}
                   />
                 </div>
