@@ -1,10 +1,38 @@
-import React, { useState } from "react";
 import "./home.css";
 import Form from "react-bootstrap/Form";
-
 import { Row, Col, Button } from "react-bootstrap";
+import React, { useState, useEffect } from "react";
+import Dialog from "@material-ui/core/Dialog";
+import DialogActions from "@material-ui/core/DialogActions";
+import DialogContent from "@material-ui/core/DialogContent";
+import DialogContentText from "@material-ui/core/DialogContentText";
+import DialogTitle from "@material-ui/core/DialogTitle";
+import ButterToast, { POS_RIGHT, POS_TOP, Cinnamon } from "butter-toast";
+import Axios from "axios";
 
-const Home = () => {
+function Home({ classes }) {
+  const [age, setAge] = useState();
+  const [city, setCity] = useState();
+  const [province, setProvince] = useState();
+  const [country, setCountry] = useState();
+  const [history, setHistory] = useState();
+
+  const [open, setOpen] = React.useState(false);
+  // const handleClickOpen = () => {
+  //   setOpen(true);
+  // };
+  // const handleClose = () => {
+  //   setOpen(false);
+  // };
+
+  async function sendinformation() {
+    const data = { age,city,province,country,history };
+    await Axios.post("/Covid-19", data, {});
+    // .then(res => {
+    //     window.location.reload()
+    // }).catch(error => console.log(error))
+  }
+
   return (
     <div className="big-background">
       <h1>Prediction mortality in patients infected</h1>
@@ -17,7 +45,15 @@ const Home = () => {
               Age:
             </Form.Label>
             <Col sm={2}>
-              <Form.Control type="number" placeholder="Age" min={1} max={120} />
+              <Form.Control
+                type="number"
+                placeholder="Age"
+                min={1}
+                max={120}
+                onChange={(event) => {
+                  setAge(event.target.value);
+                }}
+              />
             </Col>
           </Form.Group>
 
@@ -50,7 +86,13 @@ const Home = () => {
               City:
             </Form.Label>
             <Col sm={5}>
-              <Form.Control type="text" placeholder="City" />
+              <Form.Control
+                type="text"
+                placeholder="City"
+                onChange={(event) => {
+                  setCity(event.target.value);
+                }}
+              />
             </Col>
           </Form.Group>
           {/* -------------Province----------------------- */}
@@ -59,7 +101,13 @@ const Home = () => {
               Province
             </Form.Label>
             <Col sm={5}>
-              <Form.Control type="text" placeholder="Province" />
+              <Form.Control
+                type="text"
+                placeholder="Province"
+                onChange={(event) => {
+                  setProvince(event.target.value);
+                }}
+              />
             </Col>
           </Form.Group>
           {/* -------------Country----------------------- */}
@@ -68,7 +116,13 @@ const Home = () => {
               Country:
             </Form.Label>
             <Col sm={5}>
-              <Form.Control type="text" placeholder="Country" />
+              <Form.Control
+                type="text"
+                placeholder="Country"
+                onChange={(event) => {
+                  setCountry(event.target.value);
+                }}
+              />
             </Col>
           </Form.Group>
           {/* -------------travel_history_location----------------------- */}
@@ -77,7 +131,11 @@ const Home = () => {
               History Location:
             </Form.Label>
             <Col sm={10}>
-              <Form.Control type="text" placeholder="Travel history location" />
+              <Form.Control type="text" placeholder="Travel history location" 
+               onChange={(event) => {
+                setHistory(event.target.value);
+              }}
+              />
             </Col>
           </Form.Group>
 
@@ -440,18 +498,45 @@ const Home = () => {
                     name="group1"
                     type={type}
                     id={`inline-${type}-34`}
+                    onClick={(evet) => console.log(evet.target.value)}
                   />
                 </div>
               ))}
             </Col>
           </Form.Group>
           <center>
-          <button class="button">predic</button>
+            <button class="button" onClick={sendinformation()}>
+              predic
+            </button>
           </center>
+
+          {/* <Dialog
+            open={open}
+            onClose={handleClose}
+            aria-labelledby="responsive-dialog-title"
+          >
+            <div className="popupdonate">
+              <div classname="namefdt">
+                <DialogTitle id="responsive-dialog-title">
+                  บริจาคให้กับ
+                </DialogTitle>
+              </div>
+              <DialogContent>
+                <DialogContentText>
+                  <Form />
+                  <ButterToast position={{}} />
+                </DialogContentText>
+              </DialogContent>
+
+              <DialogActions>
+                <Button onClick={handleClose}>CLOSE</Button>
+              </DialogActions>
+            </div>
+          </Dialog> */}
         </Form>
       </div>
     </div>
   );
-};
+}
 
 export default Home;

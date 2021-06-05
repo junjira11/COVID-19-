@@ -3,7 +3,7 @@
     background-image: url("covid3.gif") ;  
     background-size: cover;
     /* font-family: 'Mali', cursive; */
-    /* position:absolute; */
+    position:sticky;
     width: 100%;
     height: 100%;
 }
