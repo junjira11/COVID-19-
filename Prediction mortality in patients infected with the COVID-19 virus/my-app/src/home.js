@@ -23,23 +23,20 @@ function Home({ classes }) {
 
 // Symptom
   const [anorexia, setAnorexia] = useState(0);
-  const [Hypertension, setHypertension] = useState();
-  const [chest, setChest] = useState();
-  const [chills, setChills] = useState();
-  const [conjunctivitis, setConjunctivitis] = useState();
-  const [cough, setCough] = useState();
-  const [diarrhea, setDiarrhea] = useState();
-  const [dizziness, setDizziness] = useState();
-  const [dyspnea, setDyspnea] = useState();
-  const [emesis, setEmesis] = useState();
-  const [expectoration, setExpectoration] = useState();
-  const [eye, setEye] = useState();
-  const [fatigue, setFatigue] = useState();
+  const [Hypertension, setHypertension] = useState(0);
+  const [chest, setChest] = useState(0);
+  const [chills, setChills] = useState(0);
+  const [conjunctivitis, setConjunctivitis] = useState(0);
+  const [cough, setCough] = useState(0);
+  const [diarrhea, setDiarrhea] = useState(0);
+  const [dizziness, setDizziness] = useState(0);
+  const [dyspnea, setDyspnea] = useState(0);
+  const [emesis, setEmesis] = useState(0);
+  const [expectoration, setExpectoration] = useState(0);
+  const [eye, setEye] = useState(0);
+  const [fatigue, setFatigue] = useState(0);
   const [fever, setFever] = useState();
-
-
-
-  const [Gasp, setGasp] = useState(0);
+const [Gasp, setGasp] = useState(0);
   const [Headache, setHeadache] = useState(0);
   const [Kidneyfailure, setKidneyfailure] = useState(0);
   const [Hypertension, setHypertension] = useState(0);
@@ -48,14 +45,11 @@ function Home({ classes }) {
   const [Pneumonia, setPneumonia] = useState(0);
   const [Myelofibrosis, setMyelofibrosis] = useState(0);
   const [Respiratorydistress, setRespiratorydistress] = useState(0);
-
-  const [Rhinorrhea, setRhinorrhea] = useState(0);
+const [Rhinorrhea, setRhinorrhea] = useState(0);
   const [Shortnessofbreath, setShortnessofbreath] = useState(0);
   const [Somnolence, setSomnolence] = useState(0);
-
-  const [Sorethroat, setSorethroat] = useState(0);
-
-  const [Sputum, setSputum] = useState(0);
+const [Sorethroat, setSorethroat] = useState(0);
+const [Sputum, setSputum] = useState(0);
   const [Septicshock, setSepticshock] = useState(0);
   const [Heartattack, setHeartattack] = useState(0);
   const [Septicshock, setSepticshock] = useState(0);
